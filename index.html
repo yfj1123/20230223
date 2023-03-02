@@ -1,44 +1,71 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>第三次就上手</title>
-    <link rel="icon" href="123.jpg" />
-
-  </head>
-  
-<body>
-<img src="123.jpg" width="399" height="299">
-  <img src="147.jpg" width="1399" height="1299">
-  <p>Before the script...</p>
-
-  
-  <script>
-    x = 1;
-    y = 2;
-    z = x + y;
-    document.querySelector("#plus").innerText = z;
+   <head>
+   	 <title>哇哈哈</title>
+   </head>
 
 
-    x = 100;
-    z = x - y;
-      document.querySelector("#subtract").innerText = z;
+   <body>
+   		<h1>BMI計算器</h1>
 
-    x = 1;
+   	<table border="2">
+   		<tr>
+   			<th>身高</th>
+   			<th>體重</th>
+   		</tr>
+   		<tr>
+   			<td><input type="number" id="height" name="height" placehorder="公尺"></td>
+   			<td><input type="number" id="weight" name="weight" placeholder="公斤"></td>
+   		</tr>
+   		<tr>
+   			<td></td>
+   			<td>
+   				<button id="calculator" onclick="calculate()">計算</button>
+   			</td>
+   		</tr>
+   	</table>
+   	<script type="text/javascript">
+   		function calculate() {
+   			let height = document.querySelector("#height").value; // 取得身高
+   			let weight = document.querySelector("#weight").value; // 取額體重
+   			alert("身高"+height);
+   			alert("體重"+weight);
+   			let bmi = weight / (height * height); // 計算BMI
+   		    alert("bmi"+bmi);
+   		    if (bmi < 18.5) {
+   		    	alert("體重過輕");
+   		    } else if (bmi >= 18.5 && bmi < 24) {
+   		    	alert("健康體位");
+   		    } else {
+   		    	alert("健康異常");
+   		    } 
+   		}
+   	</script>
 
-    z = x * y;
-         document.querySelector("#times").innerText = z;
 
+   	<h1>哈哈哈</h1>
 
-    z = x / y;
-         document.querySelector("#divid").innerText = z;
-  </script>
-  <script>
-    //alert( 'Hello, world!' );
-  </script>
+   	<table border="2">
+   		<tr>
+   			<th>書名</th>
+   			<th>作者</th>
+   		</tr>
+   		<tr>
+   			<td>練巨人</td>
+   			<td>謄本數</td>
+   		</tr>
+   		<tr>
+   			<td>七龍珠</td>
+   			<td>鳥山明</td>
+   		</tr>
+   	</table>
 
-  <p>...After the script.</p>
+   	<h2>HTML Table</h2>
+   	<h3>H3</h3>
+   	<h4>H4</h4>
+   	<h5>H5</h5>
+   	<h6>H6</h6>
 
-</body>
-
+   	 這是我的網頁
+   </body>
 </html>
