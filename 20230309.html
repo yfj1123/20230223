@@ -23,7 +23,7 @@
 </div>
 
 <div>
-	<label for"x">鄭敬昊</label>	
+	<label for"x">鄭敬淏</label>	
 	<input type="number" name="x" id="x">
 	<br>
 	<label for="y">曹政奭</label>
@@ -35,11 +35,11 @@
 <script>
 let message = "hello";
 
-let x ="鄭敬昊"
-let y ="曹政奭"
+let x ="鄭敬淏<img src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/%E6%B5%AA%E6%BC%AB%E9%80%9F%E6%88%90%E7%8F%AD-1677257458.png?crop=0.494xw:0.987xh;0.506xw,0&resize=640:*' width='50' height='50'>";
+let y ="曹政奭<img src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/6f689c91-8062-466f-a448-31aac3f229ad-1626158041.jpg?crop=1.00xw:0.866xh;0,0.0297xh&resize=640:*' width='50' height='50'>";
 
-document.querySelector("#result1").innerText = x;
-document.querySelector("#result2").innerText = y;
+document.querySelector("#result1").innerHTML = x;
+document.querySelector("#result2").innerHTML = y;
 
 function show(){
 	let result_x = document.querySelector("#x").value;
