@@ -1,16 +1,19 @@
 <style>
 	#result1 {
-		background-image: url(https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2023/03/03/0/20411431.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=1050&exp=3600);
 		background-color: purple;
-		width: 1000px;
-		height: 1000px;
+		width: 100px;
+		height: 100px;
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
 	}
 	#result2 {
-		background-image: url(https://img.ltn.com.tw/Upload/ent/page/800/2023/03/05/4229347_1.jpg);
-		background-size: 1000px 500px;
 		background-color: pink;
-		width: 1000px;
-		height: 1000px;
+		width: 100px;
+		height: 100px;
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
 	}
 </style>
 <div id='result1'>
@@ -19,14 +22,25 @@
 <div id='result2'>
 </div>
 
+<div>
+	<label for"x">鄭敬昊</label>	
+	<input type="number" name="x" id="x">
+	<br>
+	<label for="y">曹政奭</label>
+	<input type="number" name="y" id="y">
+	<br>
+	<button id="btn">顯示投票結果</button>
+</div>
+
 <script>
 let message = "hello";
+
+let x ="鄭敬昊"
+let y ="曹政奭"
+
 document.querySelector("#result1").innerText = x;
 document.querySelector("#result2").innerText = y;
 
-let x = 1;
-let y = 3.1415;
-let z = x < y;
 
 
 </script>
