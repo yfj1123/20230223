@@ -33,7 +33,14 @@ p {
 </style>
 </head>
 <body>
-	<div id="astroooo" class="manga">Astro<iframe width="560" height="315" src="https://www.youtube.com/embed/wS7anrSXKrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><img src="https://s.yimg.com/ny/api/res/1.2/tPqzSWfXgC6CvkLr68VugQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ4MA--/https://media.zenfs.com/no/mirrormedia.mg/789c70550bc11166c2683b6480848bd7"><img src="https://cdn.hk01.com/di/media/images/dw/20230223/705414113307660288165407.jpeg/Von4V1jDZ7SwEru3307vOHem2fB8mDHJjOA5N4zgOTc?v=w1920"width="500" height="500">
+	<div id="astroooo" class="manga">Astro<iframe width="560" height="315" src="https://www.youtube.com/embed/wS7anrSXKrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><img id="astro_image" src="https://s.yimg.com/ny/api/res/1.2/tPqzSWfXgC6CvkLr68VugQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ4MA--/https://media.zenfs.com/no/mirrormedia.mg/789c70550bc11166c2683b6480848bd7"><img src="https://cdn.hk01.com/di/media/images/dw/20230223/705414113307660288165407.jpeg/Von4V1jDZ7SwEru3307vOHem2fB8mDHJjOA5N4zgOTc?v=w1920"width="500" height="500">
+
+<video width="200" controls>
+  <source src="here i am.mp4" type="video/mp4">
+  Your browser does not support HTML video.
+</video>
+
+
 <audio controls>
   <source src="zoom.m4a" type="audio/mpeg">
 Your browser does not support the audio element.
@@ -48,5 +55,18 @@ Your browser does not support the audio element.
 <h1>My First CSS Example</h1>
 <p>This is a paragraph.</p>
 
+<script>
+  let astro = ['https://cdn.hk01.com/di/media/images/dw/20210405/455818096025145344260197.jpeg/rcVSq7mnNcTCuCfNdyNmREV6so1sxakUh9FI7ofRSO4?v=w1920r16_9', 'https://s.newtalk.tw/album/news/738/6253fcd4960f0.jpg'];
+
+  let count = 0;
+
+  setInterval(
+    function(){
+      document.querySelector("#astro_image").src=astro[count%2];
+      count = count + 1;
+    },
+    3000
+    );
+</script>
 </body>
 </html>
