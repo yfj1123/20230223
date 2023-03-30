@@ -20,19 +20,53 @@
 		.korea, .japan, .taiwan {
 			display: inline-block;
 		}
+
+		.backroundImage {
+			width: 100vw;
+			height: 100vh;
+			background-size: cover;
+			background-image: url(https://im.marieclaire.com.tw/m800c533h100b0/assets/mc/202301/63BFA5046D5BF1673504004.jpeg);
+			position:fixed;
+			top:0px;
+			left:0px;
+			z-index: -1;
+		}
+		.backroundImage video{
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
+			left:-150px;
+		}
+
+		body {
+			color: white;
+			font-size: 50px;
+		}
+
+		.news_title {
+			background-color: rgba(0, 0, 0, 0.5);
+			font-family: "Audiowide", 標楷體, serif;
+		}
 	</style>
 </head>
 
 <body>
+
+	<div class="backroundImage">
+		<video id="backgroundVideo">
+			<source src="backround.mp4" type="video/mp4">
+		</video>
+	</div>
+
     <button onclick="hide();">隱藏文字</button>
     <button onclick="show();">顯示文字</button>
     <button onclick="hideastro();">隱藏astro</button>
     <button onclick="showastro();">顯示astro</button>
     
     <div class="news_title">
-	第六周上課
+	第六週上課，時間過好快。
 	<br />
-	要準備期中報告了
+	要準備期中報告了==
     </div>
    
  <div class="bands"> 
@@ -86,8 +120,20 @@
 		for(let i = 0; i < elements.length; i=i+1){
            elements[i].style.display = "block";	
 	    }
+	    document.querySelector("#backgroundVideo").src="astro.mp4";
+
 	 
 	}
+
+    window.addEventListener("click", function(){
+		let video = document.querySelector("#backgroundVideo");
+		if (video.paused) {
+			video.play();
+		} else {
+			video.pause();
+		}
+	});
+
 </script>
 
 </body>
